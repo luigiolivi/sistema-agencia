@@ -9,13 +9,6 @@ public class Pacote {
     private float valor;
     private float taxa;
 
-    public Pacote(Transporte transporte, Hospedagem hospedagem, String destino, int quantidadeDias) {
-        this.transporte = transporte;
-        this.hospedagem = hospedagem;
-        this.destino = destino;
-        this.quantidadeDias = quantidadeDias;
-    }
-
     public Transporte getTransporte() {
         return transporte;
     }
@@ -47,6 +40,32 @@ public class Pacote {
     public void setQuantidadeDias(int quantidadeDias) {
         this.quantidadeDias = quantidadeDias;
     }
+
+    public int getMargemPorcentagem() {
+        return margemPorcentagem;
+    }
+
+    public void setMargemPorcentagem(int margemPorcentagem) {
+        this.margemPorcentagem = margemPorcentagem;
+    }
+
+    public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
+
+    public float getTaxa() {
+        return taxa;
+    }
+
+    public void setTaxa(float taxa) {
+        this.taxa = taxa;
+    }
+    
+    
     
     public float calcularHospedagem() {
         return (quantidadeDias * hospedagem.getDiaria());

@@ -4,14 +4,8 @@ public class Venda {
     private String cliente;
     private String formaPagamento;
     private Pacote pacote;
-    private float valor;
     private float dolar;
 
-    public Venda(String cliente, String formaPagamento, Pacote pacote) {
-        this.cliente = cliente;
-        this.formaPagamento = formaPagamento;
-        this.pacote = pacote;
-    }
 
     public String getCliente() {
         return cliente;
@@ -36,8 +30,17 @@ public class Venda {
     public void setPacote(Pacote pacote) {
         this.pacote = pacote;
     }
+
+    public float getDolar() {
+        return dolar;
+    }
+
+    public void setDolar(float dolar) {
+        this.dolar = dolar;
+    }
     
-    public float converterDolar() {
+    
+    public float converterDolar(pacote.) {
         return (valor * dolar);
     }
     

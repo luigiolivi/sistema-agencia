@@ -29,7 +29,21 @@ public class Agencia {
             pacote1.setDestino(pacoteDestino);
             pacote1.setQuantidadeDias(pacoteQuantidadeDias);
             
-            System.out.println("\n\nPacote criado com sucesso! \nO transporte será " + transporte1.getTipo() + ", com valor de $" + transporte1.getValor() + ".\nDescrição da hospedagem: '" + hospedagem1.getDescricao() + ".' O valor da diária: $" + hospedagem1.getDiaria() + ". A terá uma duração de " + pacote1.getQuantidadeDias() + " dias, com destino a(`) " + pacote1.getDestino() + ".\nO valor total, sem margem de lucro incluída, será de $" + pacote1.calcularTotal() + ". \nPor favor, informe agora a porcentagem (%) de margem de lucro: ");
+            float valorPacoteCriado = pacote1.calcularTotal();
+            System.out.println("\n\nPacote criado com sucesso! \nO transporte será " + transporte1.getTipo() + ", com valor de $" + transporte1.getValor() + ".\nDescrição da hospedagem: '" + hospedagem1.getDescricao() + ".' O valor da diária: $" + hospedagem1.getDiaria() + ". A terá uma duração de " + pacote1.getQuantidadeDias() + " dias, com destino a(`) " + pacote1.getDestino() + ".\nO valor total, sem margem de lucro incluída, será de $" + valorPacoteCriado + ". \nPor favor, informe agora a porcentagem (%) de margem de lucro: ");
             int pacoteMargemPorcentagem = entrada.nextInt();
+            System.out.println("O valor do pacote com margem de lucro de " + pacoteMargemPorcentagem + "% será $" + pacote1.calcularLucro(pacoteMargemPorcentagem));
+            
+            Venda venda1 = new Venda();
+            System.out.println("\n\nDigite o nome do cliente: ");
+            String vendaCliente = entrada.next();
+            System.out.println("\nDigite a forma de pagamento: ");
+            String vendaFormaPagamento = entrada.next();
+            System.out.println("Informe, por favor, o valor do dólar: ");
+            float vendaDolar = entrada.nextFloat();
+            venda1.setCliente(vendaCliente);
+            venda1.setFormaPagamento(vendaFormaPagamento);
+            venda1.setPacote(pacote1);
+            venda1.setDolar(vendaDolar);
     }
 }

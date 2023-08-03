@@ -23,18 +23,13 @@ public class Agencia {
             String pacoteDestino = entrada.next();
             System.out.println("\nDigite a quantidade de dias: ");
             int pacoteQuantidadeDias = entrada.nextInt();
-            System.out.println("\nDigite a porcentagem da margem de lucro: ");
-            int pacoteMargemPorcentagem = entrada.nextInt();
-            System.out.println("\nDigite o valor para o cálculo da margem de lucro: ");
             float pacoteValor = entrada.nextFloat();
-            System.out.println("\nDigite o valor de taxas adicionais: ");
-            float pacoteTaxa = entrada.nextFloat();
             pacote1.setTransporte(transporte1);
             pacote1.setHospedagem(hospedagem1);
             pacote1.setDestino(pacoteDestino);
             pacote1.setQuantidadeDias(pacoteQuantidadeDias);
-            pacote1.setMargemPorcentagem(pacoteMargemPorcentagem);
-            pacote1.setValor(pacoteValor);
-            pacote1.setTaxa(pacoteTaxa);
+            
+            System.out.println("\n\nPacote criado com sucesso! \nO transporte será " + transporte1.getTipo() + ", com valor de $" + transporte1.getValor() + ".\nDescrição da hospedagem: '" + hospedagem1.getDescricao() + ".' O valor da diária: $" + hospedagem1.getDiaria() + ". A terá uma duração de " + pacote1.getQuantidadeDias() + " dias, com destino a(`) " + pacote1.getDestino() + ".\nO valor total, sem margem de lucro incluída, será de $" + pacote1.calcularTotal() + ". \nPor favor, informe agora a porcentagem (%) de margem de lucro: ");
+            int pacoteMargemPorcentagem = entrada.nextInt();
     }
 }

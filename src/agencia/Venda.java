@@ -40,12 +40,12 @@ public class Venda {
     }
     
     
-    public float converterDolar(pacote.) {
-        return (valor * dolar);
+    public float converterDolar() {
+        return (pacote.getValorPacote() * dolar);
     }
     
     public void mostrarTotalPacote() {
-        System.out.println("Total do pacote em dólares: " + pacote.calcularTotal());
-        System.out.println("Total do pacote em reais: " + converterDolar());
+        System.out.println("\n\nTotal do pacote em dólares: " + pacote.calcularTotal());
+        System.out.println("\nTotal do pacote em reais: " + converterDolar());
     }
 }

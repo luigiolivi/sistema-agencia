@@ -5,7 +5,7 @@ public class Pacote {
     private Hospedagem hospedagem;
     private String destino;
     private int quantidadeDias;
-
+    private float valorPacote;
     
     public Transporte getTransporte() {
         return transporte;
@@ -37,6 +37,14 @@ public class Pacote {
 
     public void setQuantidadeDias(int quantidadeDias) {
         this.quantidadeDias = quantidadeDias;
+    }
+
+    public float getValorPacote() {
+        return valorPacote;
+    }
+
+    public void setValorPacote(float valorPacote) {
+        this.valorPacote = valorPacote;
     }
     
     

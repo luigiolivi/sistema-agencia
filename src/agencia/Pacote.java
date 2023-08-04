@@ -57,6 +57,6 @@ public class Pacote {
     }
     
     public float calcularLucro(int margemPorcentagem) {
-        return (1 + (margemPorcentagem / 100) * calcularTotal());
+        return ((calcularTotal() * (margemPorcentagem + 100)) / 100);
     }
 }

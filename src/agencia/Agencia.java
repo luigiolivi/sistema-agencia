@@ -14,7 +14,10 @@ public class Agencia {
             Transporte transporte1 = new Transporte(transporteTipo, transporteValor);
             
             System.out.println("\n\nDigite a descrição da hospedagem: ");
-            String hospedagemDescricao = entrada.next();
+            String hospedagemDescricao;
+            do {
+                hospedagemDescricao = entrada.nextLine();
+            } while(hospedagemDescricao.trim().isEmpty());
             System.out.println("\nDigite o valor da diária: ");
             float hospedagemDiaria = entrada.nextFloat();
             entrada.nextLine();
